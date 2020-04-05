@@ -3,3 +3,9 @@
     padding-right: 0rem;
     overflow: hidden;
   }
+  .material-icons{
+    float:left;
+  }
+  .td{
+    float:right;
+  }
