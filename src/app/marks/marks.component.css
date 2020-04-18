@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+  }
+  .mat-header-cell {    text-align: center;    }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 70%;
+  }
+  @font-face {
+    font-family: 'IRS';
+    src: URL('../../assets/Olde English Regular.ttf') format('truetype');
+    }

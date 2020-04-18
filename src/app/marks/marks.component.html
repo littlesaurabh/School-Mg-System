@@ -1,0 +1,104 @@
+<div style="background-color: black;font-size: x-large;" class="text-center" >  
+  <span class="text-light" style="font-size: xxx-large;font-family:IRS;">
+    The Indian <span class="text-danger">Revolutionary</span> School</span>
+  </div>
+<div class="container-fluid">
+    <div class="row mt-5">
+       <div class="offset-md-3 col-md-4">
+        <h4>Select class</h4>
+        <mat-form-field>
+          <mat-label>Classes</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let class of classes" [value]="class.value" >
+                {{class.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+       </div>
+       <!-- <div class="col-md-4">
+        <h4>Select Exam</h4>
+        <mat-form-field>
+          <mat-label>Select Exam</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let exam of exams" [value]="exam.value">
+              {{exam.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+       </div> -->
+
+    </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="text-center mt-5">
+        <mat-form-field>
+          <mat-label>Search a student</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+        </mat-form-field> 
+        <div class="mat-elevation-z8" >
+          
+        <table mat-table [dataSource] = "dataSource"id="contentToConvert">
+       
+          <ng-container matColumnDef = "rollno">
+             <th mat-header-cell *matHeaderCellDef > Roll number</th>
+             <td mat-cell *matCellDef = "let element"> {{element.rollno}} </td>
+          </ng-container>
+          <ng-container matColumnDef = "name">
+             <th mat-header-cell *matHeaderCellDef>Student Name</th>
+             <td mat-cell *matCellDef = "let element"> {{element.name}} </td>
+          </ng-container>
+          <ng-container matColumnDef = "class">
+             <th mat-header-cell *matHeaderCellDef>Class</th>
+             <td mat-cell *matCellDef = "let element"> {{element.class}} </td>
+          </ng-container>
+          <ng-container matColumnDef = "attendance">
+             <th mat-header-cell *matHeaderCellDef>Attendance %</th>
+             <td mat-cell *matCellDef = "let element"> {{element.attendance}} </td>
+          </ng-container>
+          <ng-container matColumnDef = "marks">
+             <th  mat-header-cell *matHeaderCellDef>Marks/100</th>
+            <td mat-cell *matCellDef = "let element"> {{element.marks}} </td>
+          </ng-container> 
+         
+          <ng-container matColumnDef="actions1">
+            <th  mat-header-cell *matHeaderCellDef>Mark attendance</th>
+            <!-- <mat-cell *matCellDef="let row" >
+                 <button mat-button >Edit</button>
+            </mat-cell> -->
+            <td mat-cell *matCellDef = "let element"> 
+              <mat-checkbox>Present</mat-checkbox>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th  mat-header-cell *matHeaderCellDef>Marks</th>
+            <!-- <mat-cell *matCellDef="let row" >
+                 <button mat-button >Edit</button>
+            </mat-cell> -->
+            <td mat-cell *matCellDef = "let element">    <button mat-flat-button color="primary" [routerLink]="['/updatemarks']" >Update Marks</button></td>
+          </ng-container>
+          <ng-container matColumnDef="actions2">
+            <th  mat-header-cell *matHeaderCellDef>Download Data</th>
+            <!-- <mat-cell *matCellDef="let row" >
+                 <button mat-button >Edit</button>
+            </mat-cell> -->
+            <td mat-cell *matCellDef = "let element">   
+              <button mat-stroked-button color="primary" class="mr-2" (click)="captureScreen()" >Download PDF</button> 
+              <button mat-stroked-button color="primary" (click)="exportAsXLSX()" >Download Excel</button> </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
+          <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
+          
+
+
+
+         
+
+
+       </table>
+       <mat-paginator [pageSizeOptions]="[5, 10, 20]"  showFirstLastButtons></mat-paginator>
+    
+       </div>
+       </div>
+    </div>
+  </div>
+</div>
+<!-- <mat-spinner *ngIf="!exams"></mat-spinner> -->

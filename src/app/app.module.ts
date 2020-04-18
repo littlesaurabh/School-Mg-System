@@ -36,13 +36,19 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { MarksComponent } from './marks/marks.component';
+import {ExcelService} from './marks/excel.service';
+import { UpdatemarksComponent } from './updatemarks/updatemarks.component';
+import { TimetableComponent } from './timetable/timetable.component'
 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'updatemarks', component: UpdatemarksComponent },
+  { path: 'marks', component: MarksComponent},
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'timetable', component: TimetableComponent },
   { path: '*', component: HomeComponent }
   ];
 @NgModule({
@@ -50,6 +56,9 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     DashboardComponent,
+    MarksComponent,
+    UpdatemarksComponent,
+    TimetableComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,7 +99,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ExcelService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

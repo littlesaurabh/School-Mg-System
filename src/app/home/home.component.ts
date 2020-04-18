@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
    loadStates() {
-      var allStates = 'admin, admin@psit.in'
+      var allStates = 'admin, admin@irs.com'
       this.states =  allStates.split(/, +/g).map( function (state) {
          return {
             value: state,
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
       // if(this.loginForm.userName.value&&)
       // this.router.navigate(['/dashboard']);
       console.log(this.loginForm.value)
-      if((this.loginForm.value.userName=="admin"||this.loginForm.value.userName=="admin@psit.in")&&this.loginForm.value.pass=="admin")
+      if((this.loginForm.value.userName=="admin"||this.loginForm.value.userName=="admin@irs.in")&&this.loginForm.value.pass=="admin")
       this.router.navigate(['/dashboard']);
       else
       this.errorMessage="Wrong Username or Password"
