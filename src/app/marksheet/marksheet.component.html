@@ -1,0 +1,138 @@
+<div class="container-fluid" id="contentToConvert">
+    <div class="row">
+       <!-- <div class="col-md-2 offset-md-1">
+        <img src="../../assets/logo.jpg" width="98"  alt="Logo">
+       </div> -->
+       <!-- table-striped table-inverse -->
+       <!-- table-responsive -->
+       <!-- table   table-bordered -->
+   <div class="col-md-8 offset-md-2">
+    <table class=" table-hover  table-striped table-inverse " >
+        <thead class="thead-inverse">
+            <tr>
+                <th ><img src="../../assets/logo.jpg" width="98"  alt="Logo"></th>
+            <th colspan="14"><h1 class="s1">The Indian <span class="s">Revolution</span> School</h1></th>
+           
+         </tr>
+         <tr>      <th>Gorakhpur (U. P)</th>
+            <th colspan="14">        (Affiliated to the Central Board of Secondary Education (CBSE), New Delhi)</th>
+         </tr>
+                   
+            
+            </thead>
+            <thead>
+                <tr >
+                    <th colspan="16">PROGRESS REPORT (2019 - 2020)</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                
+                    <td colspan="2">NAME :</td>
+                    <td colspan="2">VIDHI RAMRAIKA</td>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <td colspan="2">CLASS :</td>
+                    <td colspan="2">VI</td>
+                    <td></td>
+                    <td colspan="2">ROLL NO. : </td>
+                    <td colspan="2">57</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Father's NAME :</td>
+                    <td colspan="2">ROHIT RAMRAIKA</td>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <td colspan="2">SECTION : </td>
+                    <td colspan="2">E</td>
+                    <!-- <td colspan="2">VI</td> -->
+                    <td></td>
+                    <td colspan="2">D. O. B. : </td>
+                    <td colspan="2">25/06/2008</td>
+                    <td></td>
+                </tr>
+                <tr>
+                  
+                    <td colspan="2">NAME :</td>
+                    <td colspan="2">VIDHI RAMRAIKA</td>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <td colspan="2">CLASS :</td>
+                    <td colspan="2">VI</td>
+                    <td></td>
+                    <td colspan="2">ROLL NO. : </td>
+                    <td colspan="2">57</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="4" rowspan="4">SUBJECTS</th>
+                    <th colspan="2">FIRST TERM</th>
+                    <th colspan="2">SECOND TERM</th>
+                    <th colspan="4">THIRD TERM</th>
+                    <th colspan="3">AGGREGATE</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">MAX.
+                        MARK</th>
+                    <th rowspan="2">MARK
+                        OBT.</th>
+               
+                    <th rowspan="2">MAX.
+                        MARK</th>
+                    <th rowspan="2">MAX
+                        OBT.</th>
+                        <!-- <th rowspan="1" colspan="2">ASSIGNMENT /
+                            COPY/PRACTICAL</th> -->
+                        <th>MAX.
+                            MARK</th>
+                        <th>MARK
+                            OBT</th>
+                        <th>MAX.
+                            MARK</th>
+                        <th>MARK
+                            OBT</th>
+                  <th>TOTAL</th>
+                  <th>MAX.
+                    MARK</th>
+                    <th>MARK
+                        OBT.</th>
+                </tr>
+            </thead>
+            <tbody>
+           <tr *ngFor="let item of marksheet">
+            <td colspan="4">{{item.sub}}</td>
+            <td>{{item.m1}}</td>
+            <td>{{item.m2}}</td>
+            <td>{{item.m3}}</td>
+            <td>{{item.m4}}</td>
+            <td>{{item.m5}}</td>
+            <td>{{item.m6}}</td>
+            <td>{{item.m7}}</td>
+            <td>{{item.m8}}</td>
+            <td>{{item.m9}}</td>
+            <td>{{item.m10}}</td>
+            <td>{{item.m11}}</td>
+ 
+          
+            
+           </tr>
+         
+                 
+                 
+                 
+                 
+              
+                   
+                    
+            </tbody>
+    </table>
+    <!-- <div class="border1"></div> -->
+ 
+   </div>
+    </div>
+</div>
+<button (click)="captureScreen()">download </button>

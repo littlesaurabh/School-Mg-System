@@ -1,0 +1,44 @@
+.container-fluid{
+    /* border-style: double; 
+    border-color: darkblue; */
+  /* padding-top: 5%;
+  margin-top:2%;
+padding-left:2%; */
+
+}
+src{
+    width:200px;
+}
+h1{
+    color: darkblue;
+    font-family: IRS;
+    
+}
+table,th,tbody,thead,td {
+    border: 0.5px solid;
+    border-style: double; 
+    border-color: darkgreen;
+}
+@font-face {
+    font-family: 'IRS';
+    src: URL('../../assets/Olde English Regular.ttf') format('truetype');
+    }
+    .s{
+        color:red;
+        font-size: 60px;
+    }
+    .s1{
+        /* color:red; */
+        font-size: 60px;
+    }
+    td,td,th{
+        /* border: 2px solid black; */
+       text-align: center;
+    }
+   
+    .col-md-8{
+        /* border: 2px solid black; */
+    }
+    /* .border1{
+        border-style: double; border-color: darkblue;
+    } */

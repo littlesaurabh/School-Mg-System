@@ -67,19 +67,22 @@ export class MarksComponent implements OnInit {
  }
  captureScreen()  
  {  
+   console.log("Hi")
    var data = document.getElementById('contentToConvert');  
    html2canvas(data).then(canvas => {  
      // Few necessary setting options  
-     var imgWidth = 208;   
+     var imgWidth = 300;   
      var pageHeight = 295;    
+     
      var imgHeight = canvas.height * imgWidth / canvas.width;  
+     console.log(canvas.height,canvas.width,imgHeight);
      var heightLeft = imgHeight;  
  
      const contentDataURL = canvas.toDataURL('image/png')  
      let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
-     var position = 0;  
-     pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
-     pdf.save('MYPdf.pdf'); // Generated PDF   
+    //  var position = 0;  
+     pdf.addImage(contentDataURL, 'PNG', 0, 0, imgWidth, imgHeight,"abc","NONE",90)  
+     pdf.save('MYPdf111.pdf'); // Generated PDF   
    });  
  }  
    displayedColumns: string[] = [ 'rollno','name','class','attendance','marks','actions1','actions','actions2'];

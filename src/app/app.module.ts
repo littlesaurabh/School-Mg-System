@@ -39,7 +39,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MarksComponent } from './marks/marks.component';
 import {ExcelService} from './marks/excel.service';
 import { UpdatemarksComponent } from './updatemarks/updatemarks.component';
-import { TimetableComponent } from './timetable/timetable.component'
+import { TimetableComponent } from './timetable/timetable.component';
+import { MarksheetComponent } from './marksheet/marksheet.component'
 
 
 const appRoutes: Routes = [
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
     MarksComponent,
     UpdatemarksComponent,
     TimetableComponent,
+    MarksheetComponent,
   ],
   imports: [
     BrowserModule,
