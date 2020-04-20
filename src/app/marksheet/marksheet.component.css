@@ -14,7 +14,15 @@ h1{
     font-family: IRS;
     
 }
-table,th,tbody,thead,td {
+td[colspan]{
+    font-weight: bold;
+}
+table,tbody,thead,th {
+    /* border: 0.5px solid; */
+    border-style: double; 
+    border-color: darkgreen;
+}
+td {
     border: 0.5px solid;
     border-style: double; 
     border-color: darkgreen;

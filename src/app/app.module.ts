@@ -50,6 +50,7 @@ const appRoutes: Routes = [
   { path: 'marks', component: MarksComponent},
   { path: 'dashboard', component: DashboardComponent },
   { path: 'timetable', component: TimetableComponent },
+  { path: 'results', component: MarksheetComponent},
   { path: '*', component: HomeComponent }
   ];
 @NgModule({
