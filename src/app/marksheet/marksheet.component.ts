@@ -10,9 +10,16 @@ import html2canvas from 'html2canvas';
 
 export class MarksheetComponent implements OnInit {
 
+  flag:boolean=false;
   constructor() { }
  
   ngOnInit(): void {
+
+  }
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    window.print();
   }
   marksheet=[
   {  sub:"ENGLISH I",m1:"100" , m2:"91.00", m3:"100" ,m4:"45.00" ,m5:"20" ,m6:"18.00" ,m7:"80",m8: "73.00",m9: "91.00" ,m10:"300", m11:"275.00"},
