@@ -107,6 +107,9 @@ export class MarksComponent implements OnInit {
     {value:'Unit test 2', viewValue:'ut2'},
     {value:'Final Exam', viewValue:'final'},
   ]
+  sections=[
+    "A","B","C","D"
+  ]
   constructor(private excelService:ExcelService) { }
   ngOnInit(): void {
   }

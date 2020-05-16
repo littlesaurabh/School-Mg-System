@@ -1,16 +1,38 @@
-<div style="background-color: black;font-size: x-large;" class="text-center" >  
+<!-- <div style="background-color: black;font-size: x-large;" class="text-center" >  
   <span class="text-light" style="font-size: xxx-large;font-family:IRS;">
     The Indian <span class="text-danger">Revolutionary</span> School</span>
-  </div>
+  </div> -->
 <div class="container-fluid">
     <div class="row mt-5">
-       <div class="offset-md-3 col-md-4">
+       <div class="col-md-3 offset-md-2">
         <h4>Select class</h4>
         <mat-form-field>
           <mat-label>Classes</mat-label>
           <mat-select>
             <mat-option *ngFor="let class of classes" [value]="class.value" >
                 {{class.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+       </div>
+       <div class="col-md-3 col-md-1">
+        <h4>Select Section</h4>
+        <mat-form-field>
+          <mat-label>Select Section</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let sec of sections" [value]="sec"  width="100">
+              {{sec}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+       </div>
+       <div class="col-md-3">
+        <h4>Select Exam</h4>
+        <mat-form-field>
+          <mat-label>Select Exam</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let exam of exams" [value]="exam.value"  width="100">
+              {{exam.value}}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -42,6 +64,7 @@
           <ng-container matColumnDef = "rollno">
              <th mat-header-cell *matHeaderCellDef > Roll number</th>
              <td mat-cell *matCellDef = "let element"> {{element.rollno}} </td>
+             <td><input type="text"></td>
           </ng-container>
           <ng-container matColumnDef = "name">
              <th mat-header-cell *matHeaderCellDef>Student Name</th>

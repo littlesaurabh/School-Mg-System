@@ -2,3 +2,17 @@
     font-family: 'IRS';
     src: URL('../../assets/Olde English Regular.ttf') format('truetype');
     }
+    th,td{
+        font-size: small;
+        text-align: center;
+    }
+    table,tbody,thead,th {
+        /* border: 0.5px solid; */
+        border-style: double; 
+        border-color: black;
+    }
+    td {
+        border: 0.5px solid;
+        border-style: solid; 
+        border-color: black;
+    }

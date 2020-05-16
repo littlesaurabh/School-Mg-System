@@ -40,18 +40,20 @@ import { MarksComponent } from './marks/marks.component';
 import {ExcelService} from './marks/excel.service';
 import { UpdatemarksComponent } from './updatemarks/updatemarks.component';
 import { TimetableComponent } from './timetable/timetable.component';
-import { MarksheetComponent } from './marksheet/marksheet.component'
+import { MarksheetComponent } from './marksheet/marksheet.component';
+import { LogoComponent } from './logo/logo.component'
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'updatemarks', component: UpdatemarksComponent },
   { path: 'marks', component: MarksComponent},
   { path: 'dashboard', component: DashboardComponent },
   { path: 'timetable', component: TimetableComponent },
   { path: 'results', component: MarksheetComponent},
-  { path: '*', component: HomeComponent }
+  { path: '*', component: HomeComponent },
+  { path: '**', component: HomeComponent }
   ];
 @NgModule({
   declarations: [
@@ -62,6 +64,7 @@ const appRoutes: Routes = [
     UpdatemarksComponent,
     TimetableComponent,
     MarksheetComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule,
