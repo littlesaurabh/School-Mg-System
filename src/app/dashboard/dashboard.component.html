@@ -1,12 +1,14 @@
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 <!-- <app-logo></app-logo> -->
-<div  *ngIf="showMe">
+<!-- <div  *ngIf="showMe">
   <app-logo></app-logo> 
-</div>
-<div class="container-fluid"  *ngIf="!showMe">
+</div> -->
+<!-- *ngIf="!showMe" -->
+<div class="container-fluid"  >
   <div class="row">
     <div class="col-md-8" style="padding:0px;margin:0px;">
+      <app-logo *ngIf="showMe" class="mt-5"></app-logo> 
       <img style="width: 1115px;height: 750px;" src="https://c1.wallpaperflare.com/preview/289/102/403/various-book-books-college.jpg" alt="School"  >
       <div class="news-logo" style="position:absolute; top:5%; left: 5%;  right:5%; z-index:1;" align="center">
         <div class="row">

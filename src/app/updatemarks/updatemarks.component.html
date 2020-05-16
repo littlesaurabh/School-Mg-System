@@ -41,7 +41,54 @@
     
   </mat-accordion> -->
   <div class="container-fluid" >
-    <div class="row">
+    <div class="row mt-5">
+      <div class="col-md-3 offset-md-2">
+       <h4>Select class</h4>
+       <mat-form-field>
+         <mat-label>Classes</mat-label>
+         <mat-select>
+           <mat-option *ngFor="let class of classes" id="Class" [value]="class.value"  #matOption (click)="option(matOption)">
+               {{class.value}}
+           </mat-option>
+         </mat-select>
+       </mat-form-field>
+      </div>
+      <div class="col-md-3 col-md-1">
+       <h4>Select Section</h4>
+       <mat-form-field>
+         <mat-label>Select Section</mat-label>
+         <mat-select>
+           <mat-option *ngFor="let sec of sections" [value]="sec"  width="100" id="Section" #matOption (click)="option(matOption)">
+             {{sec}}
+           </mat-option>
+         </mat-select>
+       </mat-form-field>
+      </div>
+      <div class="col-md-3">
+       <h4>Select Exam</h4>
+       <mat-form-field>
+         <mat-label>Select Exam</mat-label>
+         <mat-select>
+           <mat-option *ngFor="let exam of exams" [value]="exam.value" id="Exam"  width="100" #matOption (click)="option(matOption)">
+             {{exam.value}}
+           </mat-option>
+         </mat-select>
+       </mat-form-field>
+      </div>
+      <!-- <div class="col-md-4">
+       <h4>Select Exam</h4>
+       <mat-form-field>
+         <mat-label>Select Exam</mat-label>
+         <mat-select>
+           <mat-option *ngFor="let exam of exams" [value]="exam.value">
+             {{exam.value}}
+           </mat-option>
+         </mat-select>
+       </mat-form-field>
+      </div> -->
+
+   </div>
+    <div class="row" *ngIf="hide">
       <div class="col-md-12">
         <mat-card class="mt-3">
             <div class="card-header text-center bg-dark text-light " style="font-size: 25px;">Update Results</div>

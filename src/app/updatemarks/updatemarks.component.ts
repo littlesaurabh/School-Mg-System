@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./updatemarks.component.css']
 })
 export class UpdatemarksComponent implements OnInit {
-
+ 
   constructor() { }
   panelOpenState = false;
   marksheet=[
@@ -30,7 +30,44 @@ export class UpdatemarksComponent implements OnInit {
     {value:'Unit test 2', viewValue:'ut2'},
     {value:'Final Exam', viewValue:'final'},
   ]
+  classes = [
+    {value: 'class 1', viewValue: 'class1'},
+    {value: 'class 2', viewValue: 'class2'},
+    {value: 'class 3', viewValue: 'class3'},
+    {value: 'class 4', viewValue: 'class4'},
+    {value: 'class 5', viewValue: 'class5'},
+    {value: 'class 6', viewValue: 'class6'},
+    {value: 'class 7', viewValue: 'class7'},
+    {value: 'class 8', viewValue: 'class8'},
+    {value: 'class 9', viewValue: 'class9'},
+    {value: 'class 10', viewValue: 'class10'},
+    {value: 'class 11', viewValue: 'class11'},
+    {value: 'class 12', viewValue: 'class12'},
+   
+  ];
+
+  sections=[
+    "A","B","C","D"
+  ]
+ 
   ngOnInit(): void {
+  }
+  hide:boolean=false;
+  sec:boolean=false;
+  exam:boolean=false;
+ class:boolean=false;
+  
+  option(value){
+   
+    if(value.id=='Section')
+    this.sec=true
+    else if(value.id=='Class')
+    this.class=true
+    else if(value.id=='Exam')
+    this.exam=true
+    if(this.sec==true&&this.exam==true&&this.class==true)
+    this.hide=true;
+    console.log(this.hide)
   }
 
 }
