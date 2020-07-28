@@ -42,7 +42,8 @@ import { UpdatemarksComponent } from './updatemarks/updatemarks.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { MarksheetComponent } from './marksheet/marksheet.component';
 import { LogoComponent } from './logo/logo.component'
-
+import { HttpClientModule } from '@angular/common/http';
+import {MarksService} from './marksheet/marks.service'
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -103,9 +104,10 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     FormsModule, 
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [ExcelService],
+  providers: [ExcelService,MarksService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
